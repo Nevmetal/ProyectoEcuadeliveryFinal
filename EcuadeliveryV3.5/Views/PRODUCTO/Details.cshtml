@@ -1,0 +1,91 @@
+﻿@model EcuadeliveryV3._5.PRODUCTOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/PRODUCTO/_LayoutProductos.cshtml";
+}
+
+<h2>Detalle</h2>
+
+<div>
+    <h4>PRODUCTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Producto
+            <!--Html.DisplayNameFor(model => model.PRO_NOM)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_NOM)
+        </dd>
+
+        <dt>
+            Precio
+            <!--Html.DisplayNameFor(model => model.PRO_PRECIO)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_PRECIO)
+        </dd>
+
+        <dt>
+            Descripcion
+            <!--Html.DisplayNameFor(model => model.PRO_DESCRIPCION)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_DESCRIPCION)
+        </dd>
+
+        <dt>
+            Stock
+            <!--Html.DisplayNameFor(model => model.PRO_STOCK)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_STOCK)
+        </dd>
+
+        <dt>
+            Fecha de ingreso
+            <!--Html.DisplayNameFor(model => model.PRO_FECHA_IN)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_FECHA_IN)
+        </dd>
+
+        <dt>
+            Link de la Imagen
+            <!--Html.DisplayNameFor(model => model.PRO_IMG)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_IMG)
+        </dd>
+
+        <dt>
+            Categoria
+            <!--Html.DisplayNameFor(model => model.CATEGORIA.CAT_NOMBRE)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA.CAT_NOMBRE)
+        </dd>
+
+        <dt>
+            Proveedor
+            <!--Html.DisplayNameFor(model => model.PROVEEDOR.PRV_NOMBRE)-->
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVEEDOR.PRV_NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRO_ID }) |
+    @Html.ActionLink("Regresar", "Index")
+</p>

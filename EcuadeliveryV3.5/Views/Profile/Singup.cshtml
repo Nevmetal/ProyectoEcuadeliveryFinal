@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Singup";
+    Layout = "~/Views/Profile/_LayoutPage1.cshtml";
+}
+
+@{ if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-link" style="text-align: center; font-size: 15px; font-weight: 700; color: #fff; padding: 13px 0; background: #ff3366; display: inline-block; width: 100%; outline: none; border: 2px solid #ff3366; cursor: pointer; text-transform: uppercase; ">@ViewBag.Message</div>
+
+    }
+
+}
+<h1 class="w3ls">Crea una Cuenta</h1>
+<div class="content-agileits">
+    <form action="/Profile/Create" method="post" data-toggle="validator" role="form">
+        <div class="form-group w3layouts w3 w3l">
+            <label for="firstname" class="control-label">Nombre</label>
+            <input type="text" class="form-control" name="Nombre" id="firstname" placeholder="First Name" data-error="Ingresa tu Nombre" required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group agileits w3layouts w3">
+            <label for="lastname" class="control-label">Apellido</label>
+            <input type="text" class="form-control" name="Apellido" id="lastname" placeholder="Last Name" data-error="Ingresa tu Apellido" required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group w3l agileinfo wthree w3-agileits">
+            <label for="inputEmail" class="control-label">Email</label>
+            <input type="email" class="form-control" name="Email" id="inputEmail" placeholder="Email" data-error="La dirrecion de email es invalida" required>
+            <div class="help-block with-errors"></div>
+        </div>
+        <div class="form-group agile agileits-w3layouts w3-agile">
+            <label for="inputPassword" class="control-label">Password</label>
+            <div class="form-inline row">
+                <div class="form-group col-sm-6 agileits-w3layouts">
+                    <input type="password" name="Password" data-minlength="6" class="form-control" id="inputPassword" placeholder="Password" required>
+                    <div class="help-block">Minimo de 6 caracteres</div>
+                </div>
+                <div class="form-group col-sm-6 w3-agile">
+                    <input type="password" name="Password1" class="form-control" id="inputPasswordConfirm" data-match="#inputPassword" data-match-error="Las contraseñas no coinciden" placeholder="Confirm Password" required>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-lg">Submit</button>
+        </div>
+        <div class="form-group">
+            <a href="~/Profile/Singup1" class="btn btn-lg" style="width: 100%; height: 45px; margin: 0 auto; text-align: center; float: none; color: #fff; font-size: 17px; font-weight: normal; display: block; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; background-color: #ff6d3a; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out;">Crear Cuenta tipo Proveedor</a>
+        </div>
+        <div class="form-group">
+            <a href="~/Profile/Index" class="btn btn-lg" style="width: 100%; height: 45px; margin: 0 auto; text-align: center; float: none; color: #fff; font-size: 17px; font-weight: normal; display: block; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; background-color: #ff6d3a; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out;">Login</a>
+        </div>
+        <div class="form-group">
+            <a href="~/Home/Index" class="btn btn-lg" style="width: 100%; height: 45px; margin: 0 auto; text-align: center; float: none; color: #fff; font-size: 17px; font-weight: normal; display: block; border-radius: 0; -webkit-border-radius: 0; -moz-border-radius: 0; -o-border-radius: 0; -ms-border-radius: 0; background-color: #ff6d3a; transition: all 0.5s ease-in-out; -webkit-transition: all 0.5s ease-in-out; -moz-transition: all 0.5s ease-in-out; -o-transition: all 0.5s ease-in-out; -ms-transition: all 0.5s ease-in-out;">Inicio</a>
+        </div>
+    </form>
+</div>
+<!--<p class="copyright-w3ls">© 2017 Authentication Signup Form. All Rights Reserved | Design by <a href="https://w3layouts.com/" target="_blank">W3layouts</a></p>-->
+<!-- js files -->
+<script src="~/js/bootstrap.min.js"></script>
+<script src="~/js/jquery-1.10.2.min.js"></script>
+<script src="~/js/validator.min.js"></script>
+<!-- /js files -->

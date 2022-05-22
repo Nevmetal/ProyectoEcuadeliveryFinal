@@ -1,0 +1,102 @@
+﻿@model EcuadeliveryV3._5.USUARIO
+@{
+    ViewBag.Title = " Detalle";
+    Layout = "~/Views/Profile/_LayoutPage1.cshtml";
+}
+<div class="main-body" style="margin-top: 20px; color: #1a202c; text-align: left; background-color: #e2e8f0; padding: 15px; ">
+
+    <div class="row gutters-sm">
+        <div class="col-md-4 mb-3">
+            <div class="card" style="box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06); position: relative; display: flex; flex-direction: column; min-width: 0; word-wrap: break-word; background-color: #fff; background-clip: border-box; border: 0 solid rgba(0,0,0,.125); border-radius: .25rem; ">
+                <div class="card-body" style=" flex: 1 1 auto; min-height: 1px; padding: 1rem;">
+                    <div class="d-flex flex-column align-items-center text-center">
+                        <img src="~/images/PerfilLogo.png" alt="Admin" class="rounded-circle" width="150"/>
+                        <div class="mt-3">
+                            <h4> @Model.USU_NOMBRE  @Model.USU_APELLIDO</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0" style="">Nombre</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.USU_NOMBRE
+                        </div>
+                    </div>
+                    <!--USU_ID,USU_NOMBRE,USU_APELLIDO,USU_CEDULA,USU_TELEFONO,USU_EMAIL,USU_CONTRASENA-->
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Apellido</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.USU_APELLIDO
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Cedula</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.USU_CEDULA
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Telefono</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.USU_TELEFONO
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Email</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            @Model.USU_EMAIL
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <h6 class="mb-0">Contraseña</h6>
+                        </div>
+                        <div class="col-sm-9 text-secondary">
+                            <form>
+                                <input class="form-control" id="contrasena" type="password" value="@Model.USU_CONTRASENA" disabled />
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4">
+                        <a class="btn btn-info " href="~/Profile/Edit">Edit</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <a class="btn btn-warning " href="~/Profile/Baja">Baja</a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4">
+                        <a class="btn btn-info " href="~/PRODUCTOCliente/Indice">Inicio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

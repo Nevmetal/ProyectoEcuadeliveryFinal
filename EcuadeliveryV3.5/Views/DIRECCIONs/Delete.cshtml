@@ -1,0 +1,73 @@
+﻿@model EcuadeliveryV3._5.DIRECCION
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/PRODUCTOCliente/_LayoutCar.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DIRECCION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_CALLE_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_CALLE_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_NUM_C)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_NUM_C)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_DETALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_DETALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD.CIU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD.CIU_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.USU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.USU_NOMBRE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

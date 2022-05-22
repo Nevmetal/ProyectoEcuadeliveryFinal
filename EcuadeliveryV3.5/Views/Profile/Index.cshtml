@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Profile/_LayoutPage1.cshtml";
+}
+<div class="container">
+    @{ if (!string.IsNullOrEmpty(ViewBag.Message))
+        {
+            <div class="alert alert-link" style="text-align: center; font-size: 15px; font-weight: 700; color: #fff; padding: 13px 0; background: #ff3366; display: inline-block; width: 100%; outline: none; border: 2px solid #ff3366; cursor: pointer; text-transform: uppercase; ">@ViewBag.Message</div>
+
+        }
+
+    }
+    <div class="login-form">
+
+        <div class="top-login">
+            <span><img src="images/group.png" alt="" /></span>
+        </div>
+        <h1>Login</h1>
+        <div class="login-top">
+            <form action="/Profile/Login" method="post">
+                <div class="login-ic">
+                    <i></i>
+                    <input type="text" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'User name';}" />
+                    <div class="clear"> </div>
+                </div>
+                <div class="login-ic">
+                    <i class="icon"></i>
+                    <input type="password" name="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'password';}" />
+                    <div class="clear"> </div>
+                </div>
+
+                <div class="log-bwn">
+                    <input type="submit" value="Login">
+                </div>
+                <div class="log-bwn">
+                    <a href="~/Profile/Singup"><input type="button" style="text-align: center; font-size: 15px; font-weight: 700; color: #fff; padding: 13px 0; background: #ff3366; display: inline-block; width: 100%; outline: none; border: 2px solid #ff3366; cursor: pointer; text-transform: uppercase; " value="Sign Up"></a>
+                </div>
+                <div class="log-bwn">
+                    <a href="~/Home/Index"><input type="button" style="text-align: center; font-size: 15px; font-weight: 700; color: #fff; padding: 13px 0; background: #ff3366; display: inline-block; width: 100%; outline: none; border: 2px solid #ff3366; cursor: pointer; text-transform: uppercase; " value="Inicio"></a>
+                </div>
+
+            </form>
+        </div>
+        <!--<p class="copy">© 2016 Square Login Form. All rights reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>-->
+    </div>
+</div>
+
+
+

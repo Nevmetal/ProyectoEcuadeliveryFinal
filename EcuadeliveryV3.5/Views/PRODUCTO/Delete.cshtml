@@ -1,0 +1,89 @@
+﻿@model EcuadeliveryV3._5.PRODUCTOS
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/PRODUCTO/_LayoutProductos.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>¿Estás seguro de que quieres eliminar esto?</h3>
+<div>
+    <h4>PRODUCTOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Nombre del Producto
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_NOM)
+        </dd>
+
+        <dt>
+            Precio
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_PRECIO)
+        </dd>
+
+        <dt>
+            Descripcion
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_DESCRIPCION)
+        </dd>
+
+        <dt>
+            Stock
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_STOCK)
+        </dd>
+
+        <dt>
+            Fecha de ingreso
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_FECHA_IN)
+        </dd>
+
+        <dt>
+            Link de la Imagen
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_IMG)
+        </dd>
+
+        <dt>
+            Categoria
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA.CAT_NOMBRE)
+        </dd>
+
+        <dt>
+            Proveedor
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVEEDOR.PRV_NOMBRE)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

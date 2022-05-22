@@ -1,0 +1,113 @@
+﻿@model EcuadeliveryV3._5.USUARIO
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Profile/_LayoutPage1.cshtml";
+}
+
+@{ if (!string.IsNullOrEmpty(ViewBag.Message))
+    {
+        <div class="alert alert-link" style="text-align: center; font-size: 15px; font-weight: 700; color: #fff; padding: 13px 0; background: #ff3366; display: inline-block; width: 100%; outline: none; border: 2px solid #ff3366; cursor: pointer; text-transform: uppercase; ">@ViewBag.Message</div>
+
+    }
+
+}
+<div class="container">
+    <div class="main-body">
+        <div class="row">
+            <form action="/Profile/Edit" method="post" data-toggle="validator" role="form">
+                <div class="col-lg-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="d-flex flex-column align-items-center text-center">
+                                <img src="~/images/PerfilLogo.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110" />
+                                <!--<img src="https://bootdey.com/img/Content/avatar/avatar6.png" alt="Admin" class="rounded-circle p-1 bg-primary" width="110">-->
+                                <div class="mt-3">
+                                    <h4>@Model.USU_NOMBRE  @Model.USU_APELLIDO</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-body">
+                            <!--string Nombre, string Apellido, string Cedula, string Telefono,string Email, string Password-->
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Nombre</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" name="Nombre" class="form-control" value="@Model.USU_NOMBRE" data-error="Ingresa tu Nombre" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Apellido</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" name="Apellido" class="form-control" value="@Model.USU_APELLIDO" data-error="Ingresa tu Apellido" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Cedula</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" name="Cedula" class="form-control" value="@Model.USU_CEDULA">
+                                    <div class="help-block">Minimo de 10 caracteres</div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Telefono</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="text" name="Telefono" class="form-control" value="@Model.USU_TELEFONO">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Email</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="email" name="Email" class="form-control" value="@Model.USU_EMAIL" data-error="La dirrecion de email es invalida" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="row mb-3">
+                                <div class="col-sm-3">
+                                    <h6 class="mb-0">Contraseña</h6>
+                                </div>
+                                <div class="col-sm-9 text-secondary">
+                                    <input type="password" name="Password" class="form-control" value="@Model.USU_CONTRASENA" data-error="Ingresa su contraseña" required>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            >
+                            <div class="row">
+
+                                <div class="col-xs-6 col-sm-4">
+                                    <input type="submit" class="btn btn-primary px-4" value="Save Changes">
+                                </div>
+                                <!--col-sm-9 text-secondary-->
+                                <div class="col-xs-6 col-sm-4">
+                                    <a class="btn btn-info " href="~/Profile/Detail">Regresar</a>
+                                </div>
+
+                                <div class="col-xs-6 col-sm-4">
+                                    <a class="btn btn-info " href="~/PRODUCTOCliente/Indice">Inicio</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </form>
+                
+        </div>
+    </div>
+</div>
+

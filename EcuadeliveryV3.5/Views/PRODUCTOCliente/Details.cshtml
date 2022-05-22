@@ -1,0 +1,83 @@
+﻿@model EcuadeliveryV3._5.PRODUCTOS
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Profile/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PRODUCTO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_NOM)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_NOM)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_PRECIO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_PRECIO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_DESCRIPCION)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_DESCRIPCION)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_STOCK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_STOCK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_FECHA_IN)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_FECHA_IN)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRO_IMG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRO_IMG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CATEGORIA.CAT_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CATEGORIA.CAT_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PROVEEDOR.PRV_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PROVEEDOR.PRV_NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PRO_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

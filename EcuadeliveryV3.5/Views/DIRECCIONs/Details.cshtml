@@ -1,0 +1,67 @@
+﻿@model EcuadeliveryV3._5.DIRECCION
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/PRODUCTOCliente/_LayoutCar.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DIRECCION</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_P)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_CALLE_P)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_S)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_CALLE_S)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_NUM_C)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_NUM_C)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIR_DETALLE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIR_DETALLE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CIUDAD.CIU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CIUDAD.CIU_NOMBRE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.USUARIO.USU_NOMBRE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.USUARIO.USU_NOMBRE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DIR_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

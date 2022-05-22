@@ -1,0 +1,64 @@
+﻿@model IEnumerable<EcuadeliveryV3._5.DIRECCION>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/PRODUCTOCliente/_LayoutCar.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_P)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIR_CALLE_S)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIR_NUM_C)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIR_DETALLE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CIUDAD.CIU_NOMBRE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.USUARIO.USU_NOMBRE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIR_CALLE_P)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIR_CALLE_S)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIR_NUM_C)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIR_DETALLE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CIUDAD.CIU_NOMBRE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.USUARIO.USU_NOMBRE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.DIR_ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DIR_ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DIR_ID })
+        </td>
+    </tr>
+}
+
+</table>

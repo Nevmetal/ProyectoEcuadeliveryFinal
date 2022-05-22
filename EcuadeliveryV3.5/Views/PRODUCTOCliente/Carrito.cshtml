@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Carrito";
+    Layout = "~/Views/PRODUCTOCliente/_LayoutCarrito.cshtml";
+}
+
+<h2>Carrito</h2>
+<script src="~/js/Tienda.js"></script>
+<div class="presenta">
+    <section class="shopping-cart">
+        <div class="container">
+            <h1>CARRITO</h1>
+            <hr>
+            <div class="row">
+                <div class="col-6">
+                    <div class="shopping-cart-header">
+                        <h3>Producto</h3>
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="shopping-cart-header">
+                        <h3>Precio</h3>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="shopping-cart-header">
+                        <h3>Cantidad</h3>
+                    </div>
+                </div>
+            </div>
+            <!-- ? START SHOPPING CART ITEMS -->
+            <div class="shopping-cart-items shoppingCartItemsContainer">
+            </div>
+            <!-- ? END SHOPPING CART ITEMS
+            START TOTAL -->
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="shopping-cart-total d-flex align-items-center">
+                        <p>Total</p>
+                        <p class="shoppingCartTotal" id="tot">0$</p>
+                        <button class="comprarButton" type="button" id="bcompra" onclick="enviarFormulario()">Comprar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- END TOTAL -->
+            <!-- START MODAL COMPRA -->
+            <!-- END MODAL COMPRA -->
+
+        </div>
+    </section>
+</div>

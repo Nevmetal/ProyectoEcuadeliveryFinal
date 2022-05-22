@@ -1,0 +1,100 @@
+﻿@model IEnumerable<EcuadeliveryV3._5.PRODUCTOS>
+@{
+    ViewBag.Title = "Index8";
+    Layout = "~/Views/Shared/_Layoutpro.cshtml";
+}
+
+<html lang="en">
+
+<style>
+    .cards {
+        display: flex;
+        /* Put a card in the next row when previous cards take all width */
+        flex-wrap: wrap;
+        margin-left: -8px;
+        margin-right: -8px;
+    }
+
+    .cards__item {
+        /* There will be 4 cards per row */
+        flex-basis: 25%;
+        padding-left: 8px;
+        padding-right: 8px;
+        margin-bottom: 30px;
+    }
+</style>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link href="~/css/css/bootstrap.css" rel="stylesheet" />
+
+    <script src="~/js/popper.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link href="~/css/css/sweetalert2.min.css" rel="stylesheet" />
+
+
+    <title>Carrito Compras en JavaScript</title>
+</head>
+
+
+
+
+
+<body>
+
+    <main>
+        <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 my-4 mx-auto text-center">
+            <h1 class="display-4 mt-4">Lista de Productos</h1>
+            <p class="lead">Selecciona uno de nuestros productos y accede a un descuento</p>
+        </div>
+
+        <div class="container" id="lista-productos">
+            <div class="cards">
+
+                @foreach (var item in Model)
+                {
+
+                    <div class="cards__item">
+                        <div class="card-deck mb-3 text-center">
+                            <div class="card mb-4 shadow-sm">
+                                <div class="card-header">
+                                    <h4 class="my-0 font-weight-bold">@item.PRO_NOM</h4>
+                                </div>
+                                <div class="card-body">
+                                    <img class="card-img-top" src="@Html.DisplayFor(modelItem => item.PRO_IMG)">
+                                    <h1 class="card-title pricing-card-title precio">$. <span class="">@item.PRO_PRECIO</span></h1>
+
+                                    <ul class="list-unstyled mt-3 mb-4">
+                                        <li></li>
+                                        <li>@item.PRO_DESCRIPCION</li>
+
+                                    </ul>
+                                    <a href="" class="btn btn-block btn-primary agregar-carrito" data-id="@item.PRO_ID">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                }
+
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <script src="~/js/jquery-3.4.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+
+    <script src="~/js/sweetalert2.min.js"></script>
+    <script src="~/js/carrito.js"></script>
+    <script src="~/js/pedido.js"></script>
+
+</body>
+
+</html>

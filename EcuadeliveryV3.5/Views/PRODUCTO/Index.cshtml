@@ -1,0 +1,84 @@
+﻿@model IEnumerable<EcuadeliveryV3._5.PRODUCTOS>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/PRODUCTO/_LayoutProductos.cshtml";
+}
+<h2>Bienvenido</h2>
+
+<p>
+    @Html.ActionLink("Agregar un nuevo Producto", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Nombre del Producto
+            <!--Html.DisplayNameFor(model => model.PRO_NOM)-->
+        </th>
+        <th>
+            Precio
+             <!--Html.DisplayNameFor(model => model.PRO_PRECIO)-->
+        </th>
+        <th>
+            Descripcion
+            <!--Html.DisplayNameFor(model => model.PRO_DESCRIPCION)-->
+        </th>
+        <th>
+            Stock
+            <!--Html.DisplayNameFor(model => model.PRO_STOCK)-->
+        </th>
+        <th>
+            Fecha de ingreso
+            <!--Html.DisplayNameFor(model => model.PRO_FECHA_IN)-->
+        </th>
+        <th>
+            Link de la Imagen
+            <!--Html.DisplayNameFor(model => model.PRO_IMG)-->
+        </th>
+        <th>
+            Categoria
+            <!--Html.DisplayNameFor(model => model.CATEGORIA.CAT_NOMBRE)-->
+        </th>
+        <th>
+            Proveedor
+            <!--Html.DisplayNameFor(model => model.PROVEEDOR.PRV_NOMBRE)-->
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_NOM)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_PRECIO)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_DESCRIPCION)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_STOCK)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_FECHA_IN)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRO_IMG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORIA.CAT_NOMBRE)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PROVEEDOR.PRV_NOMBRE)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.PRO_ID }) |
+                @Html.ActionLink("Detalle", "Details", new { id = item.PRO_ID }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.PRO_ID })
+            </td>
+        </tr>
+    }
+
+</table>
